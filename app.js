@@ -6,10 +6,14 @@ app.use(express.json());
 
 // Catch-all route that handles any path and method
 app.use((req, res) => {
-  res.status(201).json({
+  const response = {
     message:
       "We have migrated to a new version of our website. You can now find us at: https://api.carbonminus.com/",
-  });
+  };
+
+  response.requestBody = req.body;
+
+  res.status(201).json(response);
 });
 
 const PORT = process.env.PORT || 3000;
