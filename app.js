@@ -13,7 +13,8 @@ app.use((req, res) => {
   response["epoc_time"] = Date.now();
 
  
-  console.log(`test`);
+  console.log(req.body);
+  console.log(req.headers);
   res.status(201).json(response);
 });
 
