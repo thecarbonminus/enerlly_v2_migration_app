@@ -8,7 +8,7 @@ app.use(express.json());
 app.use((req, res) => {
   const response = {
     message:
-      "We have migrated to a new version of our website. You can now find us at: https://api.carbonminus.com/",
+      "We have migrated to a new version of our website. You can now find us at: https://app.carbonminus.com/",
   };
   response["epoc_time"] = Date.now();
 
